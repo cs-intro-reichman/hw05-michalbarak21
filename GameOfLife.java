@@ -132,11 +132,11 @@ public class GameOfLife {
 		int count = 0; 
 		for (int row = i - 1; row <= i + 1; row++ ) {
 			for (int col = j - 1; col <= j + 1; col++ ) {
-				System.out.println("current position: [" + row + ", " + col + "]");
+				/// System.out.println("current position: [" + row + ", " + col + "]");
 				if (row == i && col == j) {
 					count = count; 
 				} else if (board[row][col] == 1) {
-					System.out.println("position: [" + row + ", " + col + "] is alive");
+					/// System.out.println("position: [" + row + ", " + col + "] is alive");
 					count++;
 				}
 			}
@@ -146,8 +146,18 @@ public class GameOfLife {
 	
 	// Prints the board. Alive and dead cells are printed as 1 and 0, respectively.
     public static void print(int[][] arr) {
-		for (int i = 0; i < arr.length; i++) {
-			System.out.println(Arrays.toString(arr[i]));
+		int numRows = arr.length;
+        int numCols = arr[0].length;
+
+		int[][] innerArr = new int[numRows - 2][numCols - 2];
+
+		for (int row = 0; row < numRows - 2; row++) {
+			for (int col = 0; col < numCols - 2; col++) {
+				innerArr[row][col] = arr[row + 1][col + 1];
+			}
+		}
+		for (int row = 0; row < numRows - 2; row++) {
+			System.out.println(Arrays.toString(innerArr[row]));
 		}
 	}
 		
