@@ -13,8 +13,8 @@ public class GameOfLife {
 		String fileName = args[0];
 		//// Uncomment the test that you want to execute, and re-compile.
 		//// (Run one test at a time).
-		test1(fileName);
-		test2(fileName);
+		//// test1(fileName);
+		//// test2(fileName);
 		//// test3(fileName, 3);
 		//// play(fileName);
 	}
@@ -157,7 +157,10 @@ public class GameOfLife {
 			}
 		}
 		for (int row = 0; row < numRows - 2; row++) {
-			System.out.println(Arrays.toString(innerArr[row]));
+			for (int col = 0; col <numCols -2; col++){
+				System.out.print(innerArr[row][col] + "  ");
+			}
+			System.out.println();
 		}
 	}
 		
