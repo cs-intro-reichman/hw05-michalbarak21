@@ -13,10 +13,10 @@ public class GameOfLife {
 		String fileName = args[0];
 		//// Uncomment the test that you want to execute, and re-compile.
 		//// (Run one test at a time).
-		test1(fileName);
+		//// test1(fileName);
 		//// test2(fileName);
 		//// test3(fileName, 3);
-		//// play(fileName);
+		play(fileName);
 	}
 	
 	// Reads the data file and prints the initial board.
@@ -96,8 +96,13 @@ public class GameOfLife {
 	// Uses the cellValue(board,i,j) function to compute the value of each 
 	// cell in the new board. Returns the new board.
 	public static int[][] evolve(int[][] board) {
-		//// Replace the following statement with your code.
-		return null;
+		int[][] newBoard = new int[board.length][board[0].length];
+		for (int row = 1; row < board.length-1; row++ ) {
+			for (int col = 1; col < board[0].length-1; col++ ) {
+				newBoard[row][col] = cellValue(board, row, col);
+			}
+		}
+		return newBoard;
 	}
 
 	// Returns the value that cell (i,j) should have in the next generation.
