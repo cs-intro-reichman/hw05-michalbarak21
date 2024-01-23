@@ -40,6 +40,7 @@ public class GameOfLife {
 		int[][] board = read(fileName);
 		for (int gen = 0; gen < Ngen; gen++) {
 			System.out.println("Generation " + gen + ":");
+			System.out.print("  ");
 			print(board);
 			board = evolve(board);
 		}
@@ -162,6 +163,9 @@ public class GameOfLife {
 			}
 		}
 		for (int row = 0; row < numRows - 2; row++) {
+			if (row >= 1) {
+				System.out.print("  ");
+			}
 			for (int col = 0; col <numCols -2; col++){
 				if (col == numCols-3) {
 					System.out.print(innerArr[row][col]);
@@ -171,7 +175,7 @@ public class GameOfLife {
 			}
 			System.out.println();
 		}
-		System.out.println();
+		// System.out.println();
 	}
 		
     // Displays the board. Living and dead cells are represented by black and white squares, respectively.
