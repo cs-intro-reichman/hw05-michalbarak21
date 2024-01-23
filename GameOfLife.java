@@ -157,6 +157,9 @@ public class GameOfLife {
 			}
 		}
 		for (int row = 0; row < numRows - 2; row++) {
+			if (row >= 1) {
+				System.out.print("  ");
+			}
 			for (int col = 0; col <numCols -2; col++){
 				if (col == numCols-3) {
 					System.out.print(innerArr[row][col]);
