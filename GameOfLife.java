@@ -40,7 +40,7 @@ public class GameOfLife {
 		int[][] board = read(fileName);
 		for (int gen = 0; gen < Ngen; gen++) {
 			System.out.println("Generation " + gen + ":");
-			System.out.print("  ");
+			// System.out.print("  ");
 			print(board);
 			board = evolve(board);
 		}
@@ -164,9 +164,11 @@ public class GameOfLife {
 			}
 		}
 		for (int row = 0; row < numRows - 2; row++) {
-			if (row >= 1) {
+			/* if (row >= 1) {
 				System.out.print("  ");
-			}
+			} */
+			System.out.print("  ");
+
 			for (int col = 0; col <numCols -2; col++){
 				if (col == numCols-3) {
 					System.out.print(innerArr[row][col]);
