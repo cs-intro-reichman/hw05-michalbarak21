@@ -44,6 +44,7 @@ public class GameOfLife {
 			print(board);
 			board = evolve(board);
 		}
+		System.out.println();
 	}
 		
 	// Reads the data file and plays the game, for ever.
