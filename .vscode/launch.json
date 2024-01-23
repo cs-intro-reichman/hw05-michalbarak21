@@ -10,7 +10,7 @@
             "request": "launch",
             "mainClass": "${file}",
             "args": [
-                "C:\\Users\\achiy\\runi\\intro2cs\\HW5\\hw05-michalbarak21\\glider.dat"
+                "C:\\Users\\achiy\\runi\\intro2cs\\HW5\\hw05-michalbarak21\\line.dat"
             ]
         },
         {

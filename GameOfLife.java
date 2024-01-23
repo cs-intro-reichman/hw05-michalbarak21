@@ -15,8 +15,8 @@ public class GameOfLife {
 		//// (Run one test at a time).
 		//// test1(fileName);
 		//// test2(fileName);
-		//// test3(fileName, 3);
-		play(fileName);
+		test3(fileName, 3);
+		// play(fileName);
 	}
 	
 	// Reads the data file and prints the initial board.
@@ -162,9 +162,6 @@ public class GameOfLife {
 			}
 		}
 		for (int row = 0; row < numRows - 2; row++) {
-			if (row >= 1) {
-				System.out.print("  ");
-			}
 			for (int col = 0; col <numCols -2; col++){
 				if (col == numCols-3) {
 					System.out.print(innerArr[row][col]);
