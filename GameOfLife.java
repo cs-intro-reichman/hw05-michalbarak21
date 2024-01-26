@@ -68,7 +68,9 @@ public class GameOfLife {
 		int rows = Integer.parseInt(in.readLine());
 		int cols = Integer.parseInt(in.readLine());
 		int[][] board = new int[rows + 2][cols + 2];
-		
+
+
+		/* the for's code is needless, all the cells in an int arrays is auto-initialized to 0 */
  		for (int i = 0; i < rows + 2; i++ ) {
 			/// First I will create a board, making sure that the outtermost rows and columns are 0s. 
 			for (int j = 0; j < cols + 2; j++) {
